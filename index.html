@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caesar Cipher Decoder</title>
+    <title>Caesar Cipher Tool</title>
     <h2>Project by Chandra Priya</h2>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Caesar Cipher Decoder</h1>
+        <h1>Caesar Cipher Tool</h1>
         
         <div class="input-group">
-            <label for="input-text">Enter encrypted text:</label>
+            <label for="input-text">Enter text:</label>
             <textarea id="input-text" rows="4"></textarea>
         </div>
 
@@ -23,13 +23,14 @@
             </div>
             
             <div class="buttons">
+                <button onclick="encodeText()">Encode</button>
                 <button onclick="decodeText()">Decode</button>
                 <button onclick="handleAllShifts()">Try All Shifts</button>
             </div>
         </div>
 
         <div class="output-group">
-            <label for="output-text">Decoded text:</label>
+            <label for="output-text">Result:</label>
             <div id="output-text" class="output"></div>
         </div>
     </div>

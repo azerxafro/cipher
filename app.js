@@ -17,6 +17,22 @@ function getValidShift() {
 }
 
 /**
+ * Handles text encoding
+ */
+function encodeText() {
+    const shift = getValidShift();
+    if (shift === null) return;
+    
+    const text = inputText.value.trim();
+    if (!text) {
+        outputText.textContent = 'Please enter some text to encode';
+        return;
+    }
+    
+    outputText.textContent = encodeCaesar(text, shift);
+}
+
+/**
  * Handles single shift decoding
  */
 function decodeText() {
